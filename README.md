@@ -84,6 +84,13 @@ In controller.py from line 7; i.e save_upload function, implement the logic for 
 
 In controller.py from line 14; i.e get_all)_files function, implement the logic for quering all the files from your database. 
 
+Replace the database connection environemnt variable with your RDS connection string, connect to your RDS instance and create the file database, then deploy to elastic beanstalk.  
+
+
+feel free to reach out to via email p.arah@alustudent.com 
+
+
+
 
 
 

@@ -22,6 +22,11 @@ pip install pipenv
 this installs pipenv
 
 ```
+pipenv shell
+```
+this activates your pipenv virtual environment. N/B: this and other subsequent commands should be done inside the project root directory 
+
+```
 pipenv install
 ```
 pipenv then installs all the required dependcies for the project

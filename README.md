@@ -6,7 +6,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-python3, pip3
+python3, pip3, local or remote instance of MySQL running
 
 ### Installing
 Clone the repo from and navigate to the project folder on local machine. Using pip or pip3 dependening on how your environemnt is configured, install pipenv. This is a more decent way of managing your python depencies just like npm or go modules. 
@@ -33,30 +33,28 @@ pipenv then installs all the required dependcies for the project
 
 
 ### Database Migration
-You should have a local or remote install of mySQL running and fill in the value in the environemntal varaible in the .env file. 
-
+You should have a local or remote install of MySQL running and fill in the value in the environement variable in the .env file. The value for your database connection URL should look like this excluding "<>" placeholders.
 ```
-alembic init alembic
+mysql+pymysql://<yourusername>:<yourpassword>@<yourhost>/File
 ```
-this initilises alembic in the root directory of the project 
+ 
 
-using your mySQL client of choice create a database named File. This should look like this if you're using the mySQL  CLI client 
+using your MySQL client of choice create a database named File. This should look like this if you're using the MySQL  CLI client 
 
 ```
 create database File;
 ```
 
-alembic can then be used to create the migration
+alembic can then be used to create the migration from the model
 
 ```
 alembic revision --autogenerate -m “create files table”
 ```
-
 ```
 alembic upgrade head
 ```
 
-using your preffered mySQL client, you can then check if alembic created the migrations correctly. On the mySQL CLI this should look this.
+using your preffered MySQL client, you can then check if alembic created the migrations correctly. On the MySQL CLI this should look this.
 
 ```
 File;

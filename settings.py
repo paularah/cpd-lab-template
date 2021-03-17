@@ -10,4 +10,5 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 
+
 settings = Settings(_env_file='.env')

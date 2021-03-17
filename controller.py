@@ -12,6 +12,6 @@ async def save_upload(filename:str, filelink):
 async def get_all_files():
     # all_files = some query here
      """
-     input the query for getting all the fikles from the database here
+     input the query for getting all the files from the database here
      """
      return all_files

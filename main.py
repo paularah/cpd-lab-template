@@ -2,7 +2,6 @@ from fastapi import FastAPI, File, UploadFile, Depends, HTTPException
 from fastapi_sqlalchemy import DBSessionMiddleware
 from routes import router
 from settings import settings
-print(settings.SQLALCHEMY_DATABASE_URI)
 app = FastAPI(title="Cloud patform development course", description="Simple S3 Buckets uploader")
 app.add_middleware(DBSessionMiddleware,db_url=settings.SQLALCHEMY_DATABASE_URI)
 app.include_router(router)

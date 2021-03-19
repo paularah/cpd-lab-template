@@ -89,7 +89,7 @@ In controller.py from line 14; i.e get_all)\_files function, implement the logic
 
 Replace the database connection environemnt variable with your RDS connection string, connect to your RDS instance and create the file database, then deploy to elastic beanstalk.
 
-### Main lab logic
+### Deployment
 
 fast API uses an ASGI server, I am sure of Elastic beanstalk support for ASGI servers. A straightforward way around this is simply using docker. Choose docker as your platform of choice when deploying to EB and zip your files and upload it. Alternatively you could uses the elastic beanstalk CLI. run the command below in the project root directory to zip the files.
 
